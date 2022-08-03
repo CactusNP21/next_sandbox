@@ -13,16 +13,13 @@ export default function App(prop) {
     return (
         <div>
             <Header></Header>
-            <div style={{
-                display: "grid",
-
-            }}>
+            <ul>
                 {dishes.map(({name, id}) => (
-                    <div key={id}>
-                        <Link href={`/${id}`} key={id}>{name}</Link>
-                    </div>
+                    <li key={id}>
+                        <Link href={`/${id}`}>{name}</Link>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </div>
-    )
+)
 }
