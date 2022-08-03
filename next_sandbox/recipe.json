@@ -1,0 +1,23 @@
+[
+  {
+    "name": "fish",
+    "des": "Cook it 20 mins in oven",
+    "time": "20 min",
+    "price": "160grn",
+    "id": 1
+  },
+  {
+    "name": "salo",
+    "des": "Wrap in soil",
+    "time": "5 min",
+    "price": "100grn",
+    "id": 2
+  },
+  {
+    "name": "cumpot",
+    "des": "Cook it 30 min",
+    "time": "30 min",
+    "price": "20grn",
+    "id": 3
+  }
+]

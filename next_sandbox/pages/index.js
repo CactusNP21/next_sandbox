@@ -1,19 +1,26 @@
 import Header from "../components/header";
-import Body from "../components/body";
+import Link from "next/link";
 
-// export async function getStaticProps(context) {
-//     let user = require('../users.json')
-//     console.log(user)
-//     return {
-//         props: user, // will be passed to the page component as props
-//     }
-// }
+export async function getStaticProps() {
+    const dishes = require('../recipe.json')
+    return {
+        props: {dishes: dishes}
+    }
+}
 
-export default function App() {
+export default function App(prop) {
+    const dishes = prop.dishes
     return (
         <div>
             <Header></Header>
-            <Body></Body>
+            <div style={{
+                display: "grid",
+
+            }}>
+                {dishes.map(({name, id}) => (
+                    <Link href={`/${id}`}>{name}</Link>
+                ))}
+            </div>
         </div>
     )
 }
