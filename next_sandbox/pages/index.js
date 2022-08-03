@@ -18,7 +18,9 @@ export default function App(prop) {
 
             }}>
                 {dishes.map(({name, id}) => (
-                    <Link href={`/${id}`} key={id}>{name}</Link>
+                    <div key={id}>
+                        <Link href={`/${id}`} key={id}>{name}</Link>
+                    </div>
                 ))}
             </div>
         </div>
